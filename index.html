@@ -24,6 +24,8 @@ function getPosition(){
 	  document.getElementById("machines").innerHTML = " Vous êtes à " + Math.floor(distance*100)/100 + "km des machines de l'Ile";
 	});
 }
+getPosition();
+
 setInterval(getPosition,1000);
 
 </script>
