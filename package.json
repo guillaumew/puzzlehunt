@@ -1,0 +1,21 @@
+{
+    "name": "puzzlehunt",
+    "version": "0.1.0",
+    "engines": {
+        "node": "4.2.6"
+    },
+    "dependencies": {
+        "socket.io":"~1.4"
+    },
+    "scripts": {
+      "start": "node app.js"
+    },
+    "main": "app.js",
+    "author": "Guillaume",
+    "description": "Explore ta ville en enquêtes.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/guillaumew/puzzlehunt"
+    },
+   "license": "none"
+}
