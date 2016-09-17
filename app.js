@@ -11,5 +11,8 @@ app.get('/', function(req, res) {
     res.render('./index.twig', {});
 });
 
+app.get('/:pagename', function(req, res) {
+    res.render('./'+req.params.pagename+'.twig', {});
+});
 
 server.listen(process.env.PORT || 5000);
