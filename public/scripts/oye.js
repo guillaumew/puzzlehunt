@@ -1,4 +1,4 @@
-var places =[
+var places = [
 {
 	"name" : "Appartement Elie",
 	"adresse" : "4, rue Bâtonnier Guinaudeau, 44 000 Nantes",
