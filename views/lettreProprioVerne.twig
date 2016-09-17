@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>OYE</title>
-	<meta charset="utf-8">
-		<style type="text/css">
-		#close{
-			position: fixed;
-			top:0;
-			right: 0;
-		}
-	</style>
-</head>
-<body>
-	<a href="no_content" id="close">
-		<img src="/img/close.png">
-	</a>
-	<img src="/img/lettreProprioVerne.jpg">
-	<script type="text/javascript">
-		top.clearInterval(top.looking);
-	</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/letter.css">
+  </head>
+  <body>
+      <table>
+        <tr>
+          <td><img src="/img/carre1.gif" alt="Piece de lettre" onclick="rotatePiece(1)" id="piece1"/></td>
+          <td><img src="/img/carre2.gif" alt="Piece de lettre" onclick="rotatePiece(2)" id="piece2"/></td>
+        </tr>
+        <tr>
+          <td><img src="/img/carre3.gif" alt="Piece de lettre" onclick="rotatePiece(3)" id="piece3"/></td>
+          <td><img src="/img/carre4.gif" alt="Piece de lettre" onclick="rotatePiece(4)" id="piece4"/></td>
+        </tr>
+      </table>
+
+      <script type="text/javascript" src="scripts/letter.js"></script>
+      <noscript>Sorry, your browser does not support JavaScript!</noscript>
+  </body>
 </html>

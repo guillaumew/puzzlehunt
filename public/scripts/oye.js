@@ -1,5 +1,5 @@
 function openPlace(index) {
-	places[i].is_findable = true;
+	places[index].is_findable = true;
 	document.cookie = "places="+JSON.stringify(places);
 }
 
