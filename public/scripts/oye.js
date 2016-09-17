@@ -115,7 +115,8 @@ var objets = [
 	"url" : "/lettreProprioVerne",
 	"thumb" : "/img/lettreProprioVerne_thumb.jpg",
 	"was_found" : 0,
-	"number_to_find" : 3
+	"number_to_find" : 3,
+	"solved" : false
 },
 {
 	"name" : "Clé du garage d'Elie",
