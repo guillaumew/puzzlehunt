@@ -15,7 +15,7 @@ var places = [
 	"longitude" : -1.5640725000000657,
 	"is_findable" : true,
 	"was_found" : false,
-	"url" : "/romain"	
+	"url" : "/romain"
 },
 {
 	"name" : "Machines de l'île",
@@ -24,7 +24,7 @@ var places = [
 	"longitude" : -1.5640409999999747,
 	"is_findable" : false,
 	"was_found" : false,
-	"url" : "/machines"	
+	"url" : "/machines"
 },
 {
 	"name" : "Appartement Jules Vernes",
@@ -33,7 +33,7 @@ var places = [
 	"longitude" : -1.5638241000000335,
 	"is_findable" : false,
 	"was_found" : false,
-	"url" : "/verne"	
+	"url" : "/verne"
 },
 {
 	"name" : "Appartement Remy",
@@ -42,7 +42,7 @@ var places = [
 	"longitude" : -1.562137000000007,
 	"is_findable" : false,
 	"was_found" : false,
-	"url" : "/remy"	
+	"url" : "/remy"
 },
 {
 	"name" : "Bar Melocotton",
@@ -51,7 +51,7 @@ var places = [
 	"longitude" : -1.5618130000000292,
 	"is_findable" : false,
 	"was_found" : false,
-	"url" : "/melocotton"	
+	"url" : "/melocotton"
 },
 {
 	"name" : "Aux Merveilleux",
@@ -60,7 +60,7 @@ var places = [
 	"longitude" : -1.5633279999999559,
 	"is_findable" : false,
 	"was_found" : false,
-	"url" : "/merveilleux"	
+	"url" : "/merveilleux"
 }
 ];
 
@@ -91,21 +91,21 @@ var objets = [
 	"url" : "/coffre",
 	"thumb" : "/img/coffre_thumb.jpg",
 	"was_found" : 0,
-	"number_to_find" : 1	
+	"number_to_find" : 1
 },
 {
 	"name" : "Bouteille d'absinthe \"L'Imaginaire\"",
 	"url" : "/absinthe",
 	"thumb" : "/img/absinthe_thumb.jpg",
 	"was_found" : 0,
-	"number_to_find" : 1	
+	"number_to_find" : 1
 },
 {
 	"name" : "Note de Jules Verne",
 	"url" : "/note_verne",
 	"thumb" : "/img/note_verne_thumb.jpg",
 	"was_found" : 0,
-	"number_to_find" : 1	
+	"number_to_find" : 1
 }
 ];
 
