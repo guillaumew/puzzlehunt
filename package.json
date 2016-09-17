@@ -5,7 +5,8 @@
         "node": "4.2.6"
     },
     "dependencies": {
-        "geolocation": "~0.2"
+        "express": "^4.13.3",
+        "twig": "^0.9.5"
     },
     "scripts": {
       "start": "node app.js"
