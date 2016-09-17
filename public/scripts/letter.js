@@ -17,9 +17,6 @@ while (i < 4) {
   i++;
 }
 
-top.objets[1].solved = false;
-top.objets[1].was_found = top.objets[1].number_to_find;
-
 if (top.objets[1].solved === false && top.objets[1].was_found === top.objets[1].number_to_find) {
   var rotatePiece = function (id) {
 
