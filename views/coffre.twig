@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coffre</title>
+    <link rel="stylesheet" type="text/css" href="/css/coffre.css">
+  </head>
+  <body>
+    <img src="/img/coffre.jpg" alt="Un joli coffre" onclick="clickOnChest()">
+
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">×</span>
+        <p class="code-number" id="code-number1" onclick="changeCoffreValue(1)">0</p>
+        <p class="code-number" id="code-number2" onclick="changeCoffreValue(2)">0</p>
+        <p class="code-number" id="code-number3" onclick="changeCoffreValue(3)">0</p>
+        <p class="code-number" id="code-number4" onclick="changeCoffreValue(4)">0</p>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="scripts/coffre.js"></script>
+  	<noscript>Sorry, your browser does not support JavaScript!</noscript>
+  </body>
+</html>
