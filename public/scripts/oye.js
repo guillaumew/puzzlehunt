@@ -16,7 +16,53 @@ var places = [
 	"is_findable" : true,
 	"was_found" : false,
 	"url" : "/romain"
-}];
+},
+{
+	"name" : "Machines de l'île",
+	"adresse" : "Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes",
+	"latitude" : 47.205581,
+	"longitude" : -1.5640409999999747,
+	"is_findable" : false,
+	"was_found" : false,
+	"url" : "/machines"
+},
+{
+	"name" : "Appartement Jules Vernes",
+	"adresse" : "38 Rue La Noue Bras de Fer, 44200 Nantes",
+	"latitude" : 47.2068425,
+	"longitude" : -1.5638241000000335,
+	"is_findable" : false,
+	"was_found" : false,
+	"url" : "/verne"
+},
+{
+	"name" : "Appartement Remy",
+	"adresse" : "4 Place Graslin, 44000 Nantes",
+	"latitude" : 47.212764,
+	"longitude" : -1.562137000000007,
+	"is_findable" : false,
+	"was_found" : false,
+	"url" : "/remy"
+},
+{
+	"name" : "Bar Melocotton",
+	"adresse" : "9 Rue de l'Héronnière, 44000 Nantes",
+	"latitude" : 47.211993,
+	"longitude" : -1.5618130000000292,
+	"is_findable" : false,
+	"was_found" : false,
+	"url" : "/melocotton"
+},
+{
+	"name" : "Aux Merveilleux",
+	"adresse" : "6 Rue Franklin, 44000 Nantes",
+	"latitude" : 47.214199,
+	"longitude" : -1.5633279999999559,
+	"is_findable" : false,
+	"was_found" : false,
+	"url" : "/merveilleux"
+}
+];
 
 var objets = [
 {
@@ -37,6 +83,27 @@ var objets = [
 	"name" : "Clé du garage d'Elie",
 	"url" : "/clegarage",
 	"thumb" : "/img/clegarage_thumb.jpg",
+	"was_found" : 0,
+	"number_to_find" : 1
+},
+{
+	"name" : "Coffre à combinaison",
+	"url" : "/coffre",
+	"thumb" : "/img/coffre_thumb.jpg",
+	"was_found" : 0,
+	"number_to_find" : 1
+},
+{
+	"name" : "Bouteille d'absinthe \"L'Imaginaire\"",
+	"url" : "/absinthe",
+	"thumb" : "/img/absinthe_thumb.jpg",
+	"was_found" : 0,
+	"number_to_find" : 1
+},
+{
+	"name" : "Note de Jules Verne",
+	"url" : "/note_verne",
+	"thumb" : "/img/note_verne_thumb.jpg",
 	"was_found" : 0,
 	"number_to_find" : 1
 }
@@ -70,7 +137,7 @@ function isPlaceFound(){
 				var long_place2 = places[i].longitude;
 				var distance =  Math.acos(Math.sin(lat_place1 * Math.PI / 180)*Math.sin((Math.PI / 180 * lat_place2))+Math.cos((Math.PI / 180 * lat_place1))*Math.cos((Math.PI / 180 * lat_place2))*Math.cos(Math.PI / 180 * (long_place1-long_place2)))*6371 ;
 				console.log(places[i].name + " est à " + distance + " km.")
-				if(distance<0.1){
+				if(distance<0.03){
 					document.getElementById("oye-frame").src=places[i].url;
 					break;
 				}
