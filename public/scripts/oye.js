@@ -94,7 +94,7 @@ var objets = [
 	"number_to_find" : 1
 },
 {
-	"name" : "Bouteille d'absinthe \"L'Imaginaire\"",
+	"name" : "Bouteille d'absinthe \"Sauvage\"",
 	"url" : "/absinthe",
 	"thumb" : "/img/absinthe_thumb.jpg",
 	"was_found" : 0,
@@ -122,6 +122,9 @@ if (location.search) {
     }
 }
 
+function openPlace(index) {
+	places[i].is_findable = true;
+}
 
 function addObject(index) {
 	obj = objets[index];
