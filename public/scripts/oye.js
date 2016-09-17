@@ -74,6 +74,9 @@ function isPlaceFound(){
 					document.getElementById("oye-frame").src=places[i].url;
 					break;
 				}
+				if(i===0){
+					document.getElementById("test").innerHTML = Math.floor(distance*100)/100
+				}
 			}
 		}
 	}
