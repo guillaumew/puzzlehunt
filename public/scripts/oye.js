@@ -55,3 +55,29 @@ function addObject(index) {
 		document.getElementById("oye-object").appendChild(a_el);
 	}
 }
+
+function isPlaceFound(){
+	function errorPostion(err){
+		alert(err);
+	}
+
+	function displayPosition(position){
+		for(var i =0;i<places.length;i++){
+			if(places[i].is_findable){
+				var lat_place1 = position.coords.latitude;
+				var long_place1 = position.coords.longitude;
+				var lat_place2 = places[i].latitude;
+				var long_place2 = places[i].longitude;
+				var distance =  Math.acos(Math.sin(lat_place1 * Math.PI / 180)*Math.sin((Math.PI / 180 * lat_place2))+Math.cos((Math.PI / 180 * lat_place1))*Math.cos((Math.PI / 180 * lat_place2))*Math.cos(Math.PI / 180 * (long_place1-long_place2)))*6371 ;
+				console.log(places[i].name + " est à " + distance + " km.")
+				if(distance<0.1){
+					document.getElementById("oye-frame").src=places[i].url;
+					break;
+				}
+			}
+		}
+	}
+	navigator.geolocation.getCurrentPosition(displayPosition,errorPostion,{timeout:10000});
+}
+
+var looking = setInterval(isPlaceFound,2000);
