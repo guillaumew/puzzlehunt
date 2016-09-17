@@ -1,4 +1,32 @@
-var places = [
+function openPlace(index) {
+	places[i].is_findable = true;
+	document.cookie = "places="+JSON.stringify(places);
+}
+
+function addObject(index, force=false) {
+	obj = objets[index];
+	if(obj.was_found === 0 || force){
+		var a_el = document.createElement("a");
+		a_el.href = obj.url;
+		a_el.setAttribute("target", "content");
+		var img_el = document.createElement("img");
+		img_el.src=obj.thumb;
+		a_el.appendChild(img_el);
+		document.getElementById("oye-object").appendChild(a_el);
+	}
+	if(!force){
+		objets[index].was_found++;
+	}
+	document.cookie = "objets="+JSON.stringify(objets);
+}
+
+
+var cookiePlaces = document.cookie.replace(/(?:(?:^|.*;\s*)places\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+var cookieObjets = document.cookie.replace(/(?:(?:^|.*;\s*)objets\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+if(cookiePlaces.length>0){
+	var places = JSON.parse(cookiePlaces);
+}else{
+	var places = [
 {
 	"name" : "Appartement Elie",
 	"adresse" : "4, rue Bâtonnier Guinaudeau, 44 000 Nantes",
@@ -63,6 +91,16 @@ var places = [
 	"url" : "/merveilleux"
 }
 ];
+}
+
+if(cookieObjets.length>0){
+	var objets = JSON.parse(cookieObjets);
+	for(var i=0;i<objets.length;i++){
+		if(objets[i].was_found>0){
+			addObject(i,true);
+		}
+	}
+}else{
 
 var objets = [
 {
@@ -108,6 +146,7 @@ var objets = [
 	"number_to_find" : 1
 }
 ];
+}
 
 // Fakeing position using URL params
 var params = {};
@@ -120,24 +159,6 @@ if (location.search) {
         if (!nv[0]) continue;
         params[nv[0]] = nv[1] || true;
     }
-}
-
-function openPlace(index) {
-	places[i].is_findable = true;
-}
-
-function addObject(index) {
-	obj = objets[index];
-	if(obj.was_found === 0){
-		objets[index].was_found++;
-		var a_el = document.createElement("a");
-		a_el.href = obj.url;
-		a_el.setAttribute("target", "content");
-		var img_el = document.createElement("img");
-		img_el.src=obj.thumb;
-		a_el.appendChild(img_el);
-		document.getElementById("oye-object").appendChild(a_el);
-	}
 }
 
 function isPlaceFound(){
