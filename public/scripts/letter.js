@@ -17,10 +17,10 @@ while (i < 4) {
   i++;
 }
 
-if (top.objets[1].solved === false && top.objets[1].was_found === top.objets[1].number_to_find) {
+if (top.objets[1].solved === false && top.objets[5].was_found > 0) {
   var rotatePiece = function (id) {
 
-    if (top.objets[1].solved === false && top.objets[1].was_found === top.objets[1].number_to_find) {
+    if (top.objets[1].solved === false && top.objets[5].was_found > 0) {
       var el = document.getElementById('piece' + id);
 
       if (!rotateList[id]) {
@@ -38,18 +38,19 @@ if (top.objets[1].solved === false && top.objets[1].was_found === top.objets[1].
 
       if (!flag) {
         top.objets[1].solved = true;
-        var el = document.getElementById('letter-page');
-
-        el.innerHTML = "<p>Bravo vous avez reconstitué le puzzle !</p>";
+        var el = document.getElementById("content");
+        top.openPlace(4);
+        top.openPlace(5);
+        el.innerHTML = "<img src='/img/lettreProprioVerne.jpg'>";
       }
     }
   }
 } else if (top.objets[1].solved === true) {
-  var el = document.getElementById('letter-page');
+        var el = document.getElementById("content");
 
-  el.innerHTML = "<p>Lettre déjà reconstituée</p>";
+  el.innerHTML = "<img src='/img/lettreProprioVerne.jpg'>";
 } else {
-  var el = document.getElementById('letter-page');
+        var el = document.getElementById("content");
 
-  el.innerHTML = "<p>Vous n'avez pas encore tous les morceaux de la carte</p>";
+  el.innerHTML = "<p>Vous devez trouvez 3 tas de papiers déchirés pour pouvoir les rassembler.</p>";
 }

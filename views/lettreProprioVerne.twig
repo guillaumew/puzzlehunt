@@ -4,8 +4,19 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="/css/letter.css">
-  </head>
-  <body>
+    <style type="text/css">
+    #close{
+      position: fixed;
+      top:0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="no_content" id="close">
+    <img src="/img/close.png">
+  </a>
+    <div id="content">
       <table>
         <tr>
           <td><img src="/img/carre1.gif" alt="Piece de lettre" onclick="rotatePiece(1)" id="piece1"/></td>
@@ -16,6 +27,7 @@
           <td><img src="/img/carre4.gif" alt="Piece de lettre" onclick="rotatePiece(4)" id="piece4"/></td>
         </tr>
       </table>
+    </div>
 
       <script type="text/javascript" src="scripts/letter.js"></script>
       <noscript>Sorry, your browser does not support JavaScript!</noscript>
