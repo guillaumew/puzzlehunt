@@ -1,6 +1,5 @@
 var http = require('http');
 var express = require('express');
-var geolocation = require('geolocation');
 require("twig");
 
 var app = express();
@@ -11,7 +10,6 @@ app.use(express.static('public'));
 app.get('/', function(req, res) {
     res.render('./index.twig', {});
 });
-
 
 
 server.listen(process.env.PORT || 5000);
