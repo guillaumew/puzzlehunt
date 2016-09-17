@@ -11,9 +11,14 @@
 <p> Explore ta ville en enigmes</p>
 <p id="location"></p>
 <p id="machines"></p>
+<p id="message"></p>
 <script type="text/javascript">
-function getPosition(){
-	navigator.geolocation.getCurrentPosition(function(position) {
+
+function errorCallback(err){
+	document.getElementById("machines").innerHTML = err;
+}
+
+function displayPosition(position){
 	  document.getElementById("location").innerHTML = "Lattitude : " + position.coords.latitude + " / Longitude : "  + position.coords.longitude ;
 	  var B2 = position.coords.latitude;
 	  var C2 = position.coords.longitude;
@@ -22,11 +27,9 @@ function getPosition(){
 	  var distance =  Math.acos(Math.sin(B2 * Math.PI / 180)*Math.sin((Math.PI / 180 * B3))+Math.cos((Math.PI / 180 * B2))*Math.cos((Math.PI / 180 * B3))*Math.cos(Math.PI / 180 * (C2-C3)))*6371 ;
 
 	  document.getElementById("machines").innerHTML = " Vous êtes à " + Math.floor(distance*100)/100 + "km des machines de l'Ile";
-	});
 }
-getPosition();
 
-setInterval(getPosition,1000);
+navigator.geolocation.getCurrentPosition(displayPosition,errorCallback,{timeout:10000});
 
 </script>
 
