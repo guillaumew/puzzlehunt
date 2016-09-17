@@ -1,5 +1,5 @@
 function openPlace(index) {
-	places[i].is_findable = true;
+	places[index].is_findable = true;
 	document.cookie = "places="+JSON.stringify(places);
 }
 
@@ -115,7 +115,8 @@ var objets = [
 	"url" : "/lettreProprioVerne",
 	"thumb" : "/img/lettreProprioVerne_thumb.jpg",
 	"was_found" : 0,
-	"number_to_find" : 3
+	"number_to_find" : 3,
+	"solved" : false
 },
 {
 	"name" : "Clé du garage d'Elie",
