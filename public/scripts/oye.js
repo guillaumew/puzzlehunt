@@ -15,7 +15,7 @@ var places = [
 	"longitude" : -1.5640725000000657,
 	"is_findable" : true,
 	"was_found" : false,
-	"url" : "/romain"	
+	"url" : "/romain"
 }];
 
 var objets = [
