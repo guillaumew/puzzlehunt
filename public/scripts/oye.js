@@ -141,7 +141,7 @@ var objets = [
 },
 {
 	"name" : "Note de Jules Verne",
-	"url" : "/note_verne",
+	"url" : "/noteVerne",
 	"thumb" : "/img/note_verne_thumb.jpg",
 	"was_found" : 0,
 	"number_to_find" : 1
