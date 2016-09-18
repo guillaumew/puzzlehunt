@@ -15,6 +15,7 @@ iframe {
 #oye-object{
 	position: fixed;
 	bottom: 0;
+	overflow: auto;
 }
 
 #oye-object img{
