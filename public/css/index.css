@@ -13,10 +13,13 @@ iframe {
 }
 
 #oye-object{
-	position: fixed;
-	bottom: 0;
-	overflow: auto;
-	height: 15%;
+    position: absolute;
+    bottom: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 15%;
+    width: auto;
+    white-space: nowrap;
 }
 
 #oye-object img{
