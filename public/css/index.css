@@ -16,8 +16,15 @@ iframe {
 	position: fixed;
 	bottom: 0;
 	overflow: auto;
+	height: 15%;
 }
 
 #oye-object img{
-	width:15%;
+	height:100%;
+}
+
+#oye-object p{
+	position: absolute;
+	top:-20px;
+	margin:0;
 }
