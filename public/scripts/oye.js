@@ -1,6 +1,11 @@
 function openPlace(index) {
 	places[index].is_findable = true;
-	document.cookie = "places="+JSON.stringify(places);
+	try{
+		document.cookie = "places="+JSON.stringify(places);
+	} catch(e){
+		console.log(e);	
+	}
+	
 }
 
 function addObject(index, force=false) {
@@ -17,12 +22,25 @@ function addObject(index, force=false) {
 	if(!force){
 		objets[index].was_found++;
 	}
-	document.cookie = "objets="+JSON.stringify(objets);
+	try{
+		document.cookie = "objets="+JSON.stringify(objets);
+	} catch(e){
+		console.log(e);
+	}
+	
+}
+
+var cookieObjets, cookiePlaces;
+
+try{
+	cookiePlaces = document.cookie.replace(/(?:(?:^|.*;\s*)places\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookieObjets = document.cookie.replace(/(?:(?:^|.*;\s*)objets\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+}catch(e){
+	console.log(e);
 }
 
 
-var cookiePlaces = document.cookie.replace(/(?:(?:^|.*;\s*)places\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-var cookieObjets = document.cookie.replace(/(?:(?:^|.*;\s*)objets\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+
 if(cookiePlaces.length>0){
 	var places = JSON.parse(cookiePlaces);
 }else{
